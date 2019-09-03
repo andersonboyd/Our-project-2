@@ -4,18 +4,16 @@ $(document).ready(function(){
   var $buyCoin = $("#inputBuyCoin");
   var $buyAmt = $("#inputBuyAmount");
   var $sellCoin = $("#inputSellCoin");
-  var $sellAmt = $("#inputSellAmount");
-  var amount = $buyAmt.val();
-  var amt = $sellAmt.val();
-  var coinId;
+  var $sellAmt = $("#inputSellAmount");  
 
   function buyCoin(coin, amount){
+    console.log(coin);
+    console.log(amount);
     $.ajax({
       method: "GET",
       url: "/api/coins/" + coin
-    }).then(function(data){
-      console.log(data);
-      coinId = 1;
+    }).then(function(dat){
+      coinId = dat.id;
       $.ajax({
         method: "POST",
         url: "/api/coins/buy/" + coinId,
@@ -56,14 +54,15 @@ $(document).ready(function(){
   function handleBuy(event){
     event.preventDefault();
     var coin = $buyCoin.val();
-
+    var amount = $buyAmt.val();
+    console.log(amount);
     buyCoin(coin, amount);
   }
 
   function handleSell(event){
     event.preventDefault();
     var coin = $sellCoin.val();
-
+    var amt = $sellAmt.val();
     console.log(coin);
     console.log(amount);
     sellCoin(coin, amt);

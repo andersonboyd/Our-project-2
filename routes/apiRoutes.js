@@ -101,7 +101,7 @@ module.exports = function(app){
                 db.portfolio.update({usdBalance: newBalance}, 
                   {where: {id: dbP.id}}).then(function(dbPo){
                   console.log(dbPo);
-                  res.json(dbPo, dbC);
+                  res.status(200).json(dbPo, dbC);
                 });
               }).catch(function(err){
                 console.log(err.stack);
@@ -112,7 +112,7 @@ module.exports = function(app){
                 }).then(function(dbC){
                 db.portfolio.update({usdBalance: newBalance}, 
                   {where: {id: dbP.id}});
-                res.json(dbC);
+                res.status(200).json(dbC);
                 console.log("also a success!");
               }).catch(function(err){
                 console.log(err.stack);
@@ -150,7 +150,7 @@ module.exports = function(app){
               }).then(function(dbC){
               db.portfolio.update({usdBalance: newBalance}, 
                 {where: {id: dbP.id}});
-              res.json(dbC);
+              res.status(200).json(dbC);
             }).catch(function(err){
               console.log(err.stack);
             });
