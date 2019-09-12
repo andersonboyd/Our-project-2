@@ -41,6 +41,18 @@ module.exports = function(app){
       console.log(err.stack);
     });
   });
+
+  app.get("/api/portfolio/", isAuthenticated, function(req, res){
+    db.portfolio.findOne({
+      where: {
+        userId: req.user.id
+      }
+    }).then(function(dbPort){
+      res.json(dbPort.usdBalance);
+    }).catch(function(err){
+      console.log(err.stack);
+    });
+  });
   // ------- API/USERS/:ID - DELETE
   app.delete("/api/users/:id", isAuthenticated, function (req, res) {
     db.user.destroy({ where: { id: req.params.id } }).then(function (dbUser) {

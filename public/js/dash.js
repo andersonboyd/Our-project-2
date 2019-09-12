@@ -4,7 +4,10 @@ $(document).ready(function(){
   var $buyCoin = $("#inputBuyCoin");
   var $buyAmt = $("#inputBuyAmount");
   var $sellCoin = $("#inputSellCoin");
-  var $sellAmt = $("#inputSellAmount");  
+  var $sellAmt = $("#inputSellAmount");
+  var $history = $("#tradeHistory");
+  var $bal = $("#buyBalance");
+  var $ance = $("#sellBalance")
 
   function buyCoin(coin, amount){
     console.log(coin);
@@ -20,7 +23,18 @@ $(document).ready(function(){
         data: amount
       }).then(function(response){
         console.log(response);
-        location.reload();
+        $.ajax({
+          method: "GET",
+          url: "/api/portfolio/"
+        }).then(function(resp){
+          console.log(resp);
+          $bal.text(resp);
+          $ance.text(resp);
+          $history.text(`Bought ${amount} ${coin}`);
+        }).catch(function(err){
+          console.log(err.stack);
+        });
+        // location.reload();
       }).catch(function(err){
         console.log(err.stack);
       });
@@ -42,7 +56,18 @@ $(document).ready(function(){
         data: amt
       }).then(function(response){
         console.log(response);
-        location.reload();
+        // location.reload();
+        $.ajax({
+          method: "GET",
+          url: "/api/portfolio/"
+        }).then(function(resp){
+          console.log(resp);
+          $bal.text(resp);
+          $ance.text(resp);
+          $history.text(`Sold ${amt} ${coin}`);
+        }).catch(function(err){
+          console.log(err.stack);
+        });
       }).catch(function(err){
         console.log(err.stack);
       });
@@ -55,7 +80,6 @@ $(document).ready(function(){
     event.preventDefault();
     var coin = $buyCoin.val();
     var amount = $buyAmt.val();
-    console.log(amount);
     buyCoin(coin, amount);
   }
 
@@ -63,8 +87,6 @@ $(document).ready(function(){
     event.preventDefault();
     var coin = $sellCoin.val();
     var amt = $sellAmt.val();
-    console.log(coin);
-    console.log(amount);
     sellCoin(coin, amt);
   }
 
