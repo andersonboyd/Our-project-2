@@ -1,217 +1,253 @@
-<div style="width: 100%; height:62px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; block-size:62px; font-size: 12px; box-sizing:content-box; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F;padding:1px;padding: 0px; margin: 0px;"><div style="height:40px;"><iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&pref_coin_id=1505&invert_hover=" width="100%" height="36" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing:content-box; margin: 5px 6px 10px 0px; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size: 11px;"></a></div></div>
+<div style="width: 100%;
+            height:62px;
+            background-color: #FFFFFF;
+            overflow:hidden;
+            box-sizing: border-box;
+            border: 1px solid #56667F;
+            border-radius: 4px;
+            text-align: right;
+            line-height:14px;
+            block-size:62px;
+            font-size: 12px;
+            box-sizing:content-box;
+            font-feature-settings: normal;
+            text-size-adjust: 100%;
+            box-shadow: inset 0 -20px 0 0 #56667F;
+            padding:1px;
+            margin: 0px;">
+  <div style="height:40px;">
+    <iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&pref_coin_id=1505&invert_hover=" width="100%" height="36" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe>
+  </div>
 
-    
-    
-    
+  <div style="color: #FFFFFF; 
+              line-height: 14px;
+              font-weight: 400;
+              font-size: 11px;
+              box-sizing:content-box;
+              margin: 5px 6px 10px 0px;
+              font-family: Verdana, Tahoma, Arial, sans-serif;">
+  <a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size: 11px;"></a>
+  </div>
+</div>
 
+<div class="container pt-2">
+      <div id='id-alerts' class='row'>
+  <div id='alert-fail' class="alert alert-danger alert-dismissible col-md-12" role="alert" style="display:none;">
+    <div id='fail-message'></div>
+    <button id='close_fail' type="button" class="close"  aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>          
+  </div>
+  <div id='alert-success' class="alert alert-success alert-dismissible col-md-12" role="alert" style="display:none;">
+    <div id='success-message'></div>
+    <button id='close_success' type="button" class="close" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>          
+  </div>
+</div>
 
-    <div class="container pt-2">
-            <div id='id-alerts' class='row'>
-        <div id='alert-fail' class="alert alert-danger alert-dismissible col-md-12" role="alert" style="display:none;">
-          <div id='fail-message'></div>
-          <button id='close_fail' type="button" class="close"  aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>          
-        </div>
-        <div id='alert-success' class="alert alert-success alert-dismissible col-md-12" role="alert" style="display:none;">
-          <div id='success-message'></div>
-          <button id='close_success' type="button" class="close" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>          
-        </div>
-      </div>
-
-      <input id='id_token' type='hidden'  >
-      <div class='row'>
-        <div class="col-md-3 p-0">
-            <div class="card-body p-0">
+<input id='id_token' type='hidden'  >
+<div class='row'>
+  <div class="col-md-3 p-0">
+      <div class="card-body p-0">
+          
+        <div id='market-flex' class="d-flex d-flex-market align-items-start bd-highlight mb-0" style="height: 577px;">
+          <div id='market-container' class='container p-0'>
+              <div style="height:577px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #262b3e1f; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; box-sizing:content-box; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F; padding: 0px; margin: 0px; width: 370px;"><div style="height:413px;"><iframe src="https://widget.coinlib.io/widget?type=full_v2&theme=light&cnt=10&pref_coin_id=1505&graph=yes" width="100%" height="577px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing:content-box; margin: 3px 6px 10px 0px; font-family: Verdana, Tahoma, Arial, sans-serif;"></div></div>
+            <table id='table_market' class="table table-sm  table-hover table-orders">
+                  <thead>
                 
-              <div id='market-flex' class="d-flex d-flex-market align-items-start bd-highlight mb-0" style="height: 577px;">
-                <div id='market-container' class='container p-0'>
-                    <div style="height:577px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #262b3e1f; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; box-sizing:content-box; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F; padding: 0px; margin: 0px; width: 370px;"><div style="height:413px;"><iframe src="https://widget.coinlib.io/widget?type=full_v2&theme=light&cnt=10&pref_coin_id=1505&graph=yes" width="100%" height="577px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing:content-box; margin: 3px 6px 10px 0px; font-family: Verdana, Tahoma, Arial, sans-serif;"></div></div>
-                  <table id='table_market' class="table table-sm  table-hover table-orders">
-                        <thead>
-                      
+              </thead>
+              <tbody id='table-market'>
+              </tbody>
+            </table>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class='col-md-9 pl-1.4'>
+    <div class='container p-0'>
+      <div class='row p-0'>
+        <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container">
+              <div id="tradingview_97d20"></div>
+              <!-- <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/COINBASE-BTCUSD/" rel="noopener" target="_blank"><span class="blue-text">BTCUSD Chart</span></a> by TradingView</div> -->
+              <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+              <script type="text/javascript">
+              new TradingView.widget(
+              {
+              "width": 1112,
+              "height": 577,
+              "symbol": "COINBASE:BTCUSD",
+              "interval": "1",
+              "timezone": "Etc/UTC",
+              "theme": "Light",
+              "style": "1",
+              "locale": "en",
+              "toolbar_bg": "#f1f3f6",
+              "enable_publishing": false,
+              "allow_symbol_change": true,
+              "container_id": "tradingview_97d20"
+          }
+              );
+              </script>
+          </div>
+<!-- TradingView Widget END -->
+
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+
+<div class='row'>
+  <div class="col-md-3 p-1">
+    <div class="card">
+      <div id='header_buy' class="card-header">
+        <tr>
+          <td><strong>Buy</strong></td>
+        </tr>
+      </div>
+      <div class="card-body p-1">
+        <div class="alert alert-secondary p-1" role="alert">
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-6'>
+                <table>
+                  <thead>
+                    <tr><th>Your balance:</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td id="buyBalance">
+                        ${{portfolio.usdBalance}}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form id="form_buy" class="p-3">
+          <div class="form-group row">
+            <label for="inputBuyCoin" class="col-md-4 col-form-label form-control-sm">Coin:</label>
+            <div class="col-md-8">
+                <select class="chosen-select" id="inputBuyCoin">
+                  <option value="Bitcoin">Bitcoin</option>
+                  <option value="Ethereum">Ethereum</option>
+                  <option value="Tether">Tether</option>
+                  <option value="Litecoin">Litecoin</option>
+                </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputBuyAmount" class="col-md-4 col-form-label form-control-sm">Amount:</label>
+            <div class="col-md-8">
+              <input type="text" class="form-control" id="inputBuyAmount" placeholder="0.0">
+            </div>
+          </div>
+          <button type="submit" id="buyBtn" class="btn btn-primary">Buy</button>
+        </form>
+        
+      </div>
+    </div>          
+  </div>
+  <div class="col-md-3 p-1">
+    <div class="card">
+        <div id='header_sell' class="card-header">
+          <tr>
+              <td><strong>Sell</strong></td>
+          </tr>
+        </div>
+        <div class="card-body p-1">
+          <div class="alert alert-secondary p-1" role="alert">
+            <div class='container'>
+              <div class='row'>
+                <div class='col-md-6'>
+                  <table>
+                    <thead>
+                      <tr><th>Your balance:</th></tr>
                     </thead>
-                    <tbody id='table-market'>
+                    <tbody>
+                      <tr>
+                        <td id="sellBalance">
+                          ${{portfolio.usdBalance}}                                  
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class='col-md-9 pl-1.4'>
-          <div class='container p-0'>
-            <div class='row p-0'>
-             <!-- TradingView Widget BEGIN -->
-                <div class="tradingview-widget-container">
-                    <div id="tradingview_97d20"></div>
-                    <!-- <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/COINBASE-BTCUSD/" rel="noopener" target="_blank"><span class="blue-text">BTCUSD Chart</span></a> by TradingView</div> -->
-                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-                    <script type="text/javascript">
-                    new TradingView.widget(
-                    {
-                    "width": 1112,
-                    "height": 577,
-                    "symbol": "COINBASE:BTCUSD",
-                    "interval": "1",
-                    "timezone": "Etc/UTC",
-                    "theme": "Light",
-                    "style": "1",
-                    "locale": "en",
-                    "toolbar_bg": "#f1f3f6",
-                    "enable_publishing": false,
-                    "allow_symbol_change": true,
-                    "container_id": "tradingview_97d20"
-                }
-                    );
-                    </script>
-                </div>
-  <!-- TradingView Widget END -->
-   
-            </div>
-          </div>
-          
-        </div>
-        
-      </div>
-
-      <div class='row'>
-        <div class="col-md-3 p-1">
-          <div class="card">
-            <div id='header_buy' class="card-header">
-              <tr>
-                       <td><strong>Buy</strong></td>
-                     </tr>
-            </div>
-            <div class="card-body p-1">
-              <div class="alert alert-secondary p-1" role="alert">
-                <div class='container'>
-                  <div class='row'>
-                    <div class='col-md-6'>
-                      <table>
-                        <thead>
-                          <tr><th>Your balance:</th></tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td id="buyBalance">
-                              ${{portfolio.usdBalance}}
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
+            <form id="form_sell" class="p-3">
+              <div class="form-group row">
+                <label for="inputSellCoin" class="col-md-4 col-form-label form-control-sm">Coin:</label>
+                <div class="col-md-8">
+                  <select class="chosen-select" id="inputSellCoin">
+                    <option value="Bitcoin">Bitcoin</option>
+                    <option value="Ethereum">Ethereum</option>
+                    <option value="Tether">Tether</option>
+                    <option value="Litecoin">Litecoin</option>
+                  </select>
                 </div>
               </div>
-              <form id="form_buy" class="p-3">
-                <div class="form-group row">
-                  <label for="inputBuyCoin" class="col-md-4 col-form-label form-control-sm">Coin:</label>
-                  <div class="col-md-8">
-                      <select class="chosen-select" id="inputBuyCoin">
-                        <option value="Bitcoin">Bitcoin</option>
-                        <option value="Ethereum">Ethereum</option>
-                        <option value="Tether">Tether</option>
-                        <option value="Litecoin">Litecoin</option>
-                      </select>
-                  </div>
+              <div class="form-group row">
+                <label for="inputSellAmount" class="col-md-4 col-form-label form-control-sm">Amount:</label>
+                <div class="col-md-8">
+                  <input type="text" class="form-control" id="inputSellAmount" placeholder="0.0">
                 </div>
-                <div class="form-group row">
-                  <label for="inputBuyAmount" class="col-md-4 col-form-label form-control-sm">Amount:</label>
-                  <div class="col-md-8">
-                    <input type="text" class="form-control" id="inputBuyAmount" placeholder="0.0">
-                  </div>
-                </div>
-                <button type="submit" id="buyBtn" class="btn btn-primary">Buy</button>
-              </form>
-              
-            </div>
-          </div>          
+              </div>
+              <button type="submit" id="sellBtn" class="btn btn-primary">Sell</button>
+            </form>
         </div>
-        <div class="col-md-3 p-1">
-          <div class="card">
-                  <div id='header_sell' class="card-header">
-                    <tr>
-                       <td><strong>Sell</strong></td>
-                     </tr>
-                  </div>
-                  <div class="card-body p-1">
-                    <div class="alert alert-secondary p-1" role="alert">
-                      <div class='container'>
-                        <div class='row'>
-                          <div class='col-md-6'>
-                            <table>
-                              <thead>
-                                <tr><th>Your balance:</th></tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td id="sellBalance">
-                                    ${{portfolio.usdBalance}}                                  
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                      <form id="form_sell" class="p-3">
-                        <div class="form-group row">
-                          <label for="inputSellCoin" class="col-md-4 col-form-label form-control-sm">Coin:</label>
-                          <div class="col-md-8">
-                            <select class="chosen-select" id="inputSellCoin">
-                              <option value="Bitcoin">Bitcoin</option>
-                              <option value="Ethereum">Ethereum</option>
-                              <option value="Tether">Tether</option>
-                              <option value="Litecoin">Litecoin</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label for="inputSellAmount" class="col-md-4 col-form-label form-control-sm">Amount:</label>
-                          <div class="col-md-8">
-                            <input type="text" class="form-control" id="inputSellAmount" placeholder="0.0">
-                          </div>
-                        </div>
-                        <button type="submit" id="sellBtn" class="btn btn-primary">Sell</button>
-                      </form>
-                  </div>
-                </div>          
-        </div>
-        <div class="col-md-6 p-1">
-            <div class="card">
-                <!-- <div class="card-header">
-                   Trade history:
-                 </div>-->
-                 <div class="card-header p-0">
-                   <table class='table table-orders m-0'>
-                     <tr>
-                       <td><strong>Trade history:</strong></td>
-                     </tr>
-                   </table>
-                 </div>
-                 
-                 
-                 <div class="card-body div-orders p-0">
-                   <table id="table_all_history" class="table table-striped table-sm table-orders">
-                     <thead>
-                       <tr>
-                         <th>Time</th>
-                         <th>Type</th>
-                         <th>Volume</th>
-                         <th>Price</th>
-                       </tr>
-                     </thead>
-                     <tbody id='tradeHistory'>
-                     </tbody>
-                   </table>
-                 </div>
-               </div>          
-        </div>
-      </div>       
+      </div>          
+  </div>
+  {{!-- need card to show user portfolio (coins, amount, total value) --}}
+  <div class="col-md-3 p-1">
+    <div class="card">
+      <div class="card-header">
+        <tr>
+          <td><strong>Your Portfolio</strong></td>
+        </tr>
+      </div>
 
+      <div class="card-body p-1">
+        <table id="portfolio" class="table table-striped table-sm table-orders">
+
+        </table>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-md-3 p-1"> 
+      <div class="card">
+        <div class="card-header">
+            <tr>
+              <td><strong>Trade history:</strong></td>
+            </tr>
+        </div>
+            
+            
+        <div class="card-body p-1">
+          <table id="history" class="table table-striped table-sm table-orders">
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Type</th>
+                <th>Volume</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody id='tradeHistory'>
+            </tbody>
+          </table>
+        </div>
+      </div>          
+  </div>
+</div>
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

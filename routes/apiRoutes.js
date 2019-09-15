@@ -48,7 +48,7 @@ module.exports = function(app){
         userId: req.user.id
       }
     }).then(function(dbPort){
-      res.json(dbPort.usdBalance);
+      res.json(dbPort);
     }).catch(function(err){
       console.log(err.stack);
     });

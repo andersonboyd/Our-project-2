@@ -23,14 +23,17 @@ $(document).ready(function(){
         data: amount
       }).then(function(response){
         console.log(response);
+        var $tr = $("<tr></tr>");
+        var $td = $("<td></td>").text(`Bought ${amount} ${coin}`);
+        $tr.prepend($td);
+        $history.prepend($tr);
         $.ajax({
           method: "GET",
           url: "/api/portfolio/"
         }).then(function(resp){
           console.log(resp);
-          $bal.text(resp);
-          $ance.text(resp);
-          $history.text(`Bought ${amount} ${coin}`);
+          $bal.text(resp.usdBalance);
+          $ance.text(resp.usdBalance);
         }).catch(function(err){
           console.log(err.stack);
         });
@@ -57,14 +60,17 @@ $(document).ready(function(){
       }).then(function(response){
         console.log(response);
         // location.reload();
+        var $tr = $("<tr></tr>");
+        var $td = $("<td></td>").text(`Sold ${amt} ${coin}`);
+        $tr.prepend($td);
+        $history.prepend($tr);
         $.ajax({
           method: "GET",
           url: "/api/portfolio/"
         }).then(function(resp){
           console.log(resp);
-          $bal.text(resp);
-          $ance.text(resp);
-          $history.text(`Sold ${amt} ${coin}`);
+          $bal.text(resp.usdBalance);
+          $ance.text(resp.usdBalance);
         }).catch(function(err){
           console.log(err.stack);
         });

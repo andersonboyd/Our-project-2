@@ -95,8 +95,8 @@ Pink Lavender
     border-radius: 10px;
     background-color: #CCD7E4;
 }
-form {
-    margin-top: 20%
+#loginForm{
+    margin-top: 20%;
 }
 .logIn {
     max-width: 40%;
