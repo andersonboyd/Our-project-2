@@ -6,6 +6,7 @@ $(document).ready(function(){
   var $sellCoin = $("#inputSellCoin");
   var $sellAmt = $("#inputSellAmount");
   var $history = $("#tradeHistory");
+  var $portfolio = $("#folio");
   var $bal = $("#buyBalance");
   var $ance = $("#sellBalance")
 
@@ -16,6 +17,7 @@ $(document).ready(function(){
       method: "GET",
       url: "/api/coins/" + coin
     }).then(function(dat){
+      console.log(dat);
       coinId = dat.id;
       $.ajax({
         method: "POST",
@@ -34,6 +36,8 @@ $(document).ready(function(){
           console.log(resp);
           $bal.text(resp.usdBalance);
           $ance.text(resp.usdBalance);
+          // var $row = $("<tr></tr>");
+          // var $cell = $("<td></td>").text(`${resp}`)
         }).catch(function(err){
           console.log(err.stack);
         });
